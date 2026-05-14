@@ -1,10 +1,10 @@
-import { Star } from 'lucide-react'
+import Footer from '../components/shared/Footer'
 
 
 export default function Home() {
   return (
     <>
-      <Star />
+      <Footer/>
     </>
   );
 }
