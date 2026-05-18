@@ -1,10 +1,12 @@
-import { Star } from 'lucide-react'
+import Navbar from '../components/shared/Navbar'
+import Footer from '../components/shared/Footer'
 
 
 export default function Home() {
   return (
     <>
-      <Star />
+      <Navbar/>
+      <Footer/>
     </>
   );
 }
