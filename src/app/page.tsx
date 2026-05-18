@@ -1,12 +1,12 @@
-import Navbar from '../components/shared/Navbar'
-import Footer from '../components/shared/Footer'
+import React from 'react'
+import Dashboard from './dashboard/page'
 
-
-export default function Home() {
+const page = () => {
   return (
     <>
-      <Navbar/>
-      <Footer/>
+      <Dashboard/>
     </>
-  );
+  )
 }
+
+export default page

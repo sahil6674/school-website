@@ -32,45 +32,48 @@ const Navbar = () => {
 
   return (
     <>
-      <nav>
+      <nav className='border-b border-gray-400'>
         <div className='1 flex justify-between p-3 lg:px-5 items-center py-5 bg-white'>
-        <div className='flex gap-3'>
-          <div>
-            {/* logo image */}
-            <Image 
-              src="/images/smLogo.jpeg" 
-              width={50}
-              height={50}
-              alt='logo'
-              className='rounded-full'
-            />
+          <div className='flex gap-3'>
+            <div>
+              {/* logo image */}
+              <Image
+                src="/images/smLogo.jpeg"
+                width={50}
+                height={50}
+                alt='logo'
+                className='rounded-full'
+              />
+            </div>
+            <div>
+              <h2 className='text-xl font-bold text-green-600'>S.M. Public School</h2>
+              <h6 className='text-sm text-gray-600'>Safalta ka nur, Mehangai se dur</h6>
+            </div>
           </div>
-          <div>
-            <h2 className='text-xl font-bold'>S.M. Public School</h2>
-            <h6 className='text-sm text-gray-600'>Safalta ka nur, Mehangai se dur</h6>
+
+          <div className='hidden lg:flex gap-8'>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+
+          <div className='flex gap-3'>
+            <Search className='cursor-pointer text-green-600 hover:text-green-800' onClick={handleSearch} />
+            <Menu className='cursor-pointer lg:hidden' onClick={handleMenuBtn} />
           </div>
         </div>
 
-        <div className='hidden lg:flex gap-8'>
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-
-
-        <div className='flex gap-3'>
-          <Search className='cursor-pointer' onClick={ handleSearch }/>
-          <Menu className='cursor-pointer lg:hidden' onClick={ handleMenuBtn }/>
-        </div>
-        </div>
-
-        <div className={isSearchOpen ? 'w-full flex justify-center' : 'hidden'}>
-          <input type="text" className='h-8 p-3 border-2 border-gray-300 rounded-full m-2 w-full'/>
+        <div className={isSearchOpen ? 'w-full px-2 flex justify-center' : 'hidden'}>
+          <input 
+            type="text"
+            placeholder='Search Here...'
+            className='w-full px-6 py-1 rounded-full border border-gray-300 outline-none focus:ring-2 focus:ring-green-100 focus:border-green-400 transition-all duration-300 mb-3 shadow-sm hover:border-gray-400' />
         </div>
 
         <div className='2 flex justify-center bg-blue-200 lg:hidden'>
