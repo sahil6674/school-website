@@ -5,7 +5,7 @@ import { Mail } from 'lucide-react'
 const Footer = () => {
   return (
     <>
-      <footer className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-evenly px-5 py-10 bg-blue-200'>
+      <footer className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-evenly px-5 py-10 bg-blue-200 dark:bg-black light:text-black'>
         <div className='mb-5 lg:mb-0'>
           <h2 className='text-xl font-bold mb-5'>S.M. Family</h2>
           <p className='text-base pr-1 sm:pr-10'>Nurturing young minds since 1976. We are committed to providing quality education and holistic development for every student.</p>

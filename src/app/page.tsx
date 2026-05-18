@@ -1,9 +1,12 @@
+import React from 'react'
 import Dashboard from './dashboard/page'
 
-export default function Home() {
+const page = () => {
   return (
     <>
       <Dashboard />
     </>
-  );
+  )
 }
+
+export default page
