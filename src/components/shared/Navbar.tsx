@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <>
       <nav className='border-b border-gray-400'>
-        <div className='1 flex justify-between p-3 lg:px-5 items-center py-5 bg-white'>
+        <div className='1 flex justify-between p-3 lg:px-5 items-center py-5'>
           <div className='flex gap-3'>
             <div>
               {/* logo image */}
@@ -46,8 +46,8 @@ const Navbar = () => {
               />
             </div>
             <div>
-              <h2 className='text-xl font-bold text-green-600'>S.M. Public School</h2>
-              <h6 className='text-sm text-gray-600'>Safalta ka nur, Mehangai se dur</h6>
+              <h2 className='text-xl font-bold light:text-green-600'>S.M. Public School</h2>
+              <h6 className='text-sm light:text-gray-600'>Safalta ka nur, Mehangai se dur</h6>
             </div>
           </div>
 
@@ -63,7 +63,8 @@ const Navbar = () => {
           </div>
 
 
-          <div className='flex gap-3'>
+          <div className='flex gap-3 items-center'>
+            <input type='text' className='border-2 rounded-xl pl-3'/>
             <Search className='cursor-pointer text-green-600 hover:text-green-800' onClick={handleSearch} />
             <Menu className='cursor-pointer lg:hidden' onClick={handleMenuBtn} />
           </div>
