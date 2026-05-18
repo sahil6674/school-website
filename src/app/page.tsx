@@ -1,12 +1,9 @@
-import Navbar from '../components/shared/Navbar'
-import Footer from '../components/shared/Footer'
-
+import Dashboard from './dashboard/page'
 
 export default function Home() {
   return (
     <>
-      <Navbar/>
-      <Footer/>
+      <Dashboard />
     </>
   );
 }
